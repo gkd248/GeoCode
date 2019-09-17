@@ -6,27 +6,150 @@
     android:layout_height="match_parent"
     tools:context=".Mapping">
 
-<!--    <TextView-->
-<!--        android:id="@+id/textView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/map_title"-->
-<!--        android:textColor="@android:color/holo_blue_dark"-->
-<!--        android:textSize="40sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:fontFamily="sans-serif"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/editText"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="1.0" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/map_title"-->
+    <!--        android:textColor="@android:color/holo_blue_dark"-->
+    <!--        android:textSize="40sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:fontFamily="sans-serif"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/editText"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="1.0" />-->
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="575dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+
+
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="105dp"
+        android:layout_height="20dp"
+        android:gravity="center_horizontal"
+        android:text="Temperature"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/temp_val"
+        android:layout_width="105dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="# "
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@id/temperature" />
+
+
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:gravity="center_horizontal"
+        android:text="Humidity"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/temperature"
+        tools:layout_editor_absoluteX="106dp"
+        />
+
+
+    <TextView
+        android:id="@+id/humidity_val"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="#"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@id/humidity"
+        app:layout_constraintLeft_toRightOf="@id/temp_val"
+        tools:layout_editor_absoluteX="106dp" />
+
+    <TextView
+        android:id="@+id/wind"
+        android:layout_width="95dp"
+        android:layout_height="20dp"
+        android:gravity="center_horizontal"
+        android:text="Wind Speed"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/humidity"
+        tools:layout_editor_absoluteX="196dp" />
+
+    <TextView
+        android:id="@+id/wind_val"
+        android:layout_width="95dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="#"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@id/wind"
+        app:layout_constraintLeft_toRightOf="@id/humidity_val"
+        tools:layout_editor_absoluteX="196dp" />
+
+    <TextView
+        android:id="@+id/precip"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:gravity="center_horizontal"
+        android:text="Precipitation"
+        android:textColor="@android:color/holo_purple"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/wind"
+        tools:layout_editor_absoluteX="293dp" />
+
+    <TextView
+        android:id="@+id/precip_val"
+        android:layout_width="90dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="#"
+        android:textColor="@android:color/holo_purple"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@id/precip"
+        app:layout_constraintLeft_toRightOf="@id/wind_val"
+        tools:layout_editor_absoluteX="303dp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

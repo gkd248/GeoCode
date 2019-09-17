@@ -46,12 +46,6 @@ public class MainActivity extends AppCompatActivity {
         // Get the value of the text view.
         String address = mapText.getText().toString();
 
-        // Checking address is read in
-        // Toast myToast = Toast.makeText(this, message, duration);
-        Toast myToast = makeText(this, address,
-                Toast.LENGTH_SHORT);
-        myToast.show();
-
         // Call API to get coordinates
         // API key: AIzaSyARRJsBkisGqJ5_1Vo2QB_Pk2mIMYQVZlw
         // https://maps.googleapis.com/maps/api/geocode/json?address=+"address"+&key=YOUR_API_KEY;
@@ -71,57 +65,11 @@ public class MainActivity extends AppCompatActivity {
             // Start the new activity.
             startActivity(mappingIntent);
         }
-        catch (IOException e){
-            Toast connection = makeText(this, "Error connecting",
+        catch (Exception e){
+            Toast connection = makeText(this, "Invalid Address. Try Again.",
                     Toast.LENGTH_SHORT);
             connection.show();
         }
-
-//        try{
-//            URL url = new URL("https://maps.googleapis.com/maps/api/geocode/json?address="+address+"&key="+YOUR_API_KEY);
-//            HttpURLConnection con = (HttpURLConnection) url.openConnection();
-//            con.setRequestMethod("GET");
-//
-//            int responseCode = con.getResponseCode();
-//
-//            if(responseCode == 200){
-//
-//                // building JSON response
-//                BufferedReader in = new BufferedReader(
-//                        new InputStreamReader(con.getInputStream()));
-//                String inputLine;
-//                StringBuffer content = new StringBuffer();
-//                while ((inputLine = in.readLine()) != null) {
-//                    content.append(inputLine);
-//                }
-//                in.close();
-//                con.disconnect();
-//            }
-//
-//            JSONObject myResponse = new JSONObject(content.toString());
-//            String status = myResponse.getString("status");
-//
-//            if(status.equals("OK")){
-//
-//                // Start the new activity.
-//                startActivity(mappingIntent);
-//            }
-//            else{
-//
-//                Toast errorAlert = makeText(this, "Geocoding attempt failed.",
-//                        Toast.LENGTH_SHORT);
-//                errorAlert.show();
-//            }
-//
-//            //Call API to get extra info based off coordinates
-//
-//        }
-
-//        catch (JSONException e){
-//            Toast connection = makeText(this, "JSON Error",
-//                    Toast.LENGTH_SHORT);
-//            connection.show();
-//        }
 
 
     }
