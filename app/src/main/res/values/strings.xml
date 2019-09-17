@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GeoCoding</string>
+    <string name="address_prompt">Enter an Address!</string>
+    <string name="welcome_prompt">Welcome to GeoCode!</string>
+    <string name="button_prompt">Show Me On a Map</string>
+    <string name="map_title">Mapping</string>
+</resources>
