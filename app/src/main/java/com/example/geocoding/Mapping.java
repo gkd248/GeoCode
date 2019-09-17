@@ -32,6 +32,7 @@ import java.util.concurrent.ExecutionException;
 
 import static android.widget.Toast.makeText;
 
+// Nikhil driving
 public class Mapping extends AppCompatActivity implements OnMapReadyCallback {
 
     @Override
@@ -123,6 +124,7 @@ public class Mapping extends AppCompatActivity implements OnMapReadyCallback {
         }
     }
 
+    // Gabriel driving
     public class HttpGetRequest extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... params){

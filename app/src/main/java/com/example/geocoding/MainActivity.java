@@ -24,6 +24,7 @@ import java.util.Locale;
 
 import static android.widget.Toast.makeText;
 
+// Gabriel driving for all of layout
 public class MainActivity extends AppCompatActivity {
 
     private static final String YOUR_API_KEY = "AIzaSyARRJsBkisGqJ5_1Vo2QB_Pk2mIMYQVZlw";
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String LONG = "long";
     private static final String LAT = "lat";
+
+    // Nikhil driving
     public void mapMe(View view) {
         // Create an Intent to start the second activity
         Intent mappingIntent = new Intent(this, Mapping.class);
